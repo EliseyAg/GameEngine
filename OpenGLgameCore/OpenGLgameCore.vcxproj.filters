@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Utils\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Utils\test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4A1E8ECE-28C2-393C-A8DE-9ECA70349CAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8746BF6E-7C37-381D-8F14-347C39B573F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

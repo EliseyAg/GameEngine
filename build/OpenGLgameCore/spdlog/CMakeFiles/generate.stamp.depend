@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake
+C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/CMakeLists.txt
+C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/cmake/ide.cmake
+C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/cmake/utils.cmake

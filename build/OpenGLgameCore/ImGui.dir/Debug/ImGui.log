@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt
+  imgui.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_demo.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_draw.cpp
+  Создание кода...
+  ImGui.vcxproj -> C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\Debug\ImGui.lib
