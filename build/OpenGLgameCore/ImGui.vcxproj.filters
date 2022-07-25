@@ -1,48 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\backends\imgui_impl_glfw.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\backends\imgui_impl_glfw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\backends\imgui_impl_opengl3.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\backends\imgui_impl_opengl3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui_demo.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui_demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui_tables.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui_widgets.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui_draw.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui_draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\imgui.h">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\imgui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\backends\imgui_impl_glfw.h">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\backends\imgui_impl_glfw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\imgui\backends\imgui_impl_opengl3.h">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\external\imgui\backends\imgui_impl_opengl3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{4A1E8ECE-28C2-393C-A8DE-9ECA70349CAF}</UniqueIdentifier>
+      <UniqueIdentifier>{875FD341-4C98-3A08-BEC4-92308AF59790}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{8746BF6E-7C37-381D-8F14-347C39B573F3}</UniqueIdentifier>
+      <UniqueIdentifier>{A702385F-48F7-3B93-9BFD-1E9A56FE8A73}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

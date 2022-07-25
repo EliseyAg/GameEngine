@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/glad
+# Install script for directory: C:/Users/Elisey/Games on C++/GameEngine/external/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -2,7 +2,7 @@
 #include "OpenGLgameCore/Log.hpp"
 #include "Window.hpp"
 #include "OpenGLgameCore/Event.hpp"
-<<<<<<< HEAD
+#include "OpenGLgameCore/Input.hpp"
 #include "Modules/UIModule.hpp"
 #include "Rendering/OpenGL/ShaderProgram.hpp"
 #include "Rendering/OpenGL/VertexBuffer.hpp"
@@ -65,14 +65,6 @@ namespace Engine {
 	float rotate = 0.f;
 	float translate[3] = { 0.f, 0.f, 0.f };
 
-=======
-
-#include <GLFW/glfw3.h>
-
-#include <iostream>
-
-namespace Engine {
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 	Application::Application() {
 
         LOG_INFO("Starting Application.");
@@ -87,27 +79,51 @@ namespace Engine {
 
     int Application::start(unsigned int window_width, unsigned int window_height, const char* title) {
 		m_pWindow = std::make_unique<Window>(title, window_width, window_height);
-<<<<<<< HEAD
-=======
-		/*m_event_dispatcher.add_event_listener<EventMouseMoved>(
-			[](EventMouseMoved& event)
-			{
-				LOG_INFO("[MouseMoved] Mouse moved to {0}x{1}", event.x, event.y);
-			});*/
 
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 		m_event_dispatcher.add_event_listener<EventWindowResize>(
 			[](EventWindowResize& event)
 			{
 				LOG_INFO("[Resized] Changed size to {0}x{1}", event.height, event.height);
-			});
+			}
+		);
 
 		m_event_dispatcher.add_event_listener<EventWindowClose>(
 			[&](EventWindowClose& event)
 			{
 				LOG_INFO("[WindowClose]");
 				m_bCloseWindow = true;
-			});
+			}
+		);
+
+		m_event_dispatcher.add_event_listener<EventKeyPressed>(
+			[&](EventKeyPressed& event)
+			{
+				if (event.key_code <= KeyCode::KEY_Z)
+				{
+					if (event.repeated)
+					{
+						LOG_INFO("[Key pressed : {0}, repeated]", static_cast<char>(event.key_code));
+					}
+					else
+					{
+						LOG_INFO("[Key pressed : {0}]", static_cast<char>(event.key_code));
+					}
+				}
+				Input::PressKey(event.key_code);
+			}
+		);
+
+		m_event_dispatcher.add_event_listener<EventKeyReleased>(
+			[&](EventKeyReleased& event)
+			{
+				if (event.key_code <= KeyCode::KEY_Z)
+				{
+					LOG_INFO("[Key released {0}]", static_cast<char>(event.key_code));
+				}
+				Input::ReleaseKey(event.key_code);
+			}
+		);
+
 		m_pWindow->set_event_callback(
 			[&](BaseEvent& event)
 			{
@@ -115,7 +131,6 @@ namespace Engine {
 			}
 		);
 
-<<<<<<< HEAD
 		p_shader_program = std::make_unique<ShaderProgram>(vertex_shader, fragment_shader);
 		if (!p_shader_program->isCompiled())
 		{
@@ -192,21 +207,10 @@ namespace Engine {
 			on_ui_draw();
 
 			UIModule::on_ui_draw_end();
-=======
-		while (!m_bCloseWindow)
-		{
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 
 			m_pWindow->on_update();
 			on_update();
-
 		}
-
-<<<<<<< HEAD
-=======
-		//m_pWindow = nullptr;
-
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 		return m_pWindow->resultCode;
 
     }

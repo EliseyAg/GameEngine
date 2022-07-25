@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 #include "OpenGLgameCore/Application.hpp"
+#include "OpenGLgameCore/Input.hpp"
 
 #include <iostream>
 #include <memory>
@@ -10,7 +10,46 @@
 class EngineEditor : public Engine::Application {
 	virtual void on_update() override
 	{
-		//std::cout << "Update frame: " << frame++ << std::endl;
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_W))
+		{
+			camera_position[2] += -0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_S))
+		{
+			camera_position[2] +=  0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_A))
+		{
+			camera_position[0] += -0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_D))
+		{
+			camera_position[0] +=  0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_Q))
+		{
+			camera_position[1] +=  0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_E))
+		{
+			camera_position[1] += -0.01f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_UP))
+		{
+			camera_rotation[0] +=  0.1f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_DOWN))
+		{
+			camera_rotation[0] += -0.1f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_LEFT))
+		{
+			camera_rotation[1] +=  0.1f;
+		}
+		if (Engine::Input::IsKeyPressed(Engine::KeyCode::KEY_RIGHT))
+		{
+			camera_rotation[1] += -0.1f;
+		}
 	}
 
 	virtual void on_ui_draw() override
@@ -21,31 +60,12 @@ class EngineEditor : public Engine::Application {
 		ImGui::Checkbox("Perspective camera", &perspective_camera);
 		ImGui::End();
 	}
-
-=======
-#include <iostream>
-#include <memory>
-#include "OpenGLgameCore/Application.hpp"
-
-class MyApp : public Engine::Application {
-	virtual void on_update() override {
-		//std::cout << "Update frame: " << frame++ << std::endl;
-	}
-
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
-	int frame = 0;
 };
 
 int main() {
-<<<<<<< HEAD
 	auto pEngineEditor = std::make_unique<EngineEditor>();
 
-	int returnCode = pEngineEditor->start(1200, 600, "App");
-=======
-	auto myApp = std::make_unique<MyApp>();
-
-	int returnCode = myApp->start(1200, 600, "App");
->>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
+	int returnCode = pEngineEditor->start(1200, 600, "Editor");
 
 	return returnCode;
 }

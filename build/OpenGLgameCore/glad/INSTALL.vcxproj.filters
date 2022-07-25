@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\CMakeFiles\50e2f1300a4bf500ab0fb3a9ba742003\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\build\CMakeFiles\ec47f800b79ff67ba517a31cb0fd6de1\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{B06B1A5F-AF1D-3669-B337-E2B50BA88785}</UniqueIdentifier>
+      <UniqueIdentifier>{82AF9E19-3176-3895-A53A-3050F2BDF13B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/glfw/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameCore/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameCore/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/glfw/install_manifest.txt" files)
+file(READ "C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameCore/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

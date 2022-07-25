@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\CMakeFiles\bd7f51b58a9caea6847060a3caf911af\update_mappings.rule">
+    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\build\CMakeFiles\0ada6263b2379f58a79e6b006e4c5a99\update_mappings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\external\glfw\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\src\mappings.h.in">
+    <None Include="C:\Users\Elisey\Games on C++\GameEngine\external\glfw\src\mappings.h.in">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\CMake\GenerateMappings.cmake" />
-    <None Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\glfw\src\CMakeFiles\update_mappings" />
+    <None Include="C:\Users\Elisey\Games on C++\GameEngine\external\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\Elisey\Games on C++\GameEngine\build\OpenGLgameCore\glfw\src\CMakeFiles\update_mappings" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{B06B1A5F-AF1D-3669-B337-E2B50BA88785}</UniqueIdentifier>
+      <UniqueIdentifier>{82AF9E19-3176-3895-A53A-3050F2BDF13B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{4A1E8ECE-28C2-393C-A8DE-9ECA70349CAF}</UniqueIdentifier>
+      <UniqueIdentifier>{875FD341-4C98-3A08-BEC4-92308AF59790}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

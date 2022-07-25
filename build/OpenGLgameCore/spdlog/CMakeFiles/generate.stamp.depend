@@ -6,6 +6,6 @@ C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cm
 C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake
-C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/CMakeLists.txt
-C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/cmake/ide.cmake
-C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/spdlog/cmake/utils.cmake
+C:/Users/Elisey/Games on C++/GameEngine/external/spdlog/CMakeLists.txt
+C:/Users/Elisey/Games on C++/GameEngine/external/spdlog/cmake/ide.cmake
+C:/Users/Elisey/Games on C++/GameEngine/external/spdlog/cmake/utils.cmake

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameEditor
+# Install script for directory: C:/Users/Elisey/Games on C++/GameEngine/OpenGLgameEditor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

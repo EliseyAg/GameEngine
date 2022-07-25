@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game
+# Install script for directory: C:/Users/Elisey/Games on C++/GameEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/cmake_install.cmake")
-  include("C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameEditor/cmake_install.cmake")
+  include("C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameCore/cmake_install.cmake")
+  include("C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameEditor/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Elisey/Games on C++/GameEngine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

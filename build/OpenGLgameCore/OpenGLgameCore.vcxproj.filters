@@ -1,78 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Application.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp">
       <Filter>src\OpenGLgameCore</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Window.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Window.cpp">
       <Filter>src\OpenGLgameCore</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Camera.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Input.cpp">
       <Filter>src\OpenGLgameCore</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Camera.cpp">
+      <Filter>src\OpenGLgameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Modules\UIModule.cpp">
+      <Filter>src\OpenGLgameCore\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.cpp">
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.cpp">
+      <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Application.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Application.hpp">
       <Filter>includes\OpenGLgameCore</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Event.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Event.hpp">
       <Filter>includes\OpenGLgameCore</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Log.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Log.hpp">
       <Filter>includes\OpenGLgameCore</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Camera.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Keys.hpp">
       <Filter>includes\OpenGLgameCore</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Window.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Input.hpp">
+      <Filter>includes\OpenGLgameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\includes\OpenGLgameCore\Camera.hpp">
+      <Filter>includes\OpenGLgameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Window.hpp">
       <Filter>src\OpenGLgameCore</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Modules\UIModule.hpp">
+      <Filter>src\OpenGLgameCore\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.hpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.hpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.hpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.hpp">
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.hpp">
+      <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.hpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="includes">
-      <UniqueIdentifier>{F36A97B9-B0FA-3431-9FA7-1B316FCFEA13}</UniqueIdentifier>
+      <UniqueIdentifier>{A4423ADA-5AF1-3510-BFCA-538105C0A37C}</UniqueIdentifier>
     </Filter>
     <Filter Include="includes\OpenGLgameCore">
-      <UniqueIdentifier>{97EC2892-1D2E-31D2-86AC-A08E27957BEF}</UniqueIdentifier>
+      <UniqueIdentifier>{7D3E4A61-AFD7-3A6F-B1F0-DAA2190245BB}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{894CD351-63F9-3E84-A546-31EC761FBB4F}</UniqueIdentifier>
+      <UniqueIdentifier>{23A42E89-575D-30F4-A407-921A29DDBB0C}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\OpenGLgameCore">
-      <UniqueIdentifier>{F1158A1F-853B-3EB5-AA6B-92600E47F9A6}</UniqueIdentifier>
+      <UniqueIdentifier>{F8C28934-7944-3DD3-8477-9F8E029F76F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\OpenGLgameCore\Modules">
+      <UniqueIdentifier>{83F71461-C17F-3512-96BE-8ACAACDECC19}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\OpenGLgameCore\Rendering">
-      <UniqueIdentifier>{A7E05333-20C6-3A99-9D05-D62EDE1E4D8C}</UniqueIdentifier>
+      <UniqueIdentifier>{7334F83B-65FE-389D-90B6-2C4CD543ADF4}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\OpenGLgameCore\Rendering\OpenGL">
-      <UniqueIdentifier>{7489A4E0-895E-3EC4-9B32-E80E288CFBAC}</UniqueIdentifier>
+      <UniqueIdentifier>{443889DA-BB41-38F1-BC07-6E7E4DF239C3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

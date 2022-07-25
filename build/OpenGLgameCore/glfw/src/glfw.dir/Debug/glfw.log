@@ -1,4 +1,4 @@
-﻿  Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/external/glfw/src/CMakeLists.txt
+﻿  Building Custom Rule C:/Users/Elisey/Games on C++/GameEngine/external/glfw/src/CMakeLists.txt
   context.c
   init.c
   input.c
@@ -23,4 +23,4 @@
   Компиляция...
   wgl_context.c
   Создание кода...
-  glfw.vcxproj -> C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\glfw\src\Debug\glfw3.lib
+  glfw.vcxproj -> C:\Users\Elisey\Games on C++\GameEngine\build\OpenGLgameCore\glfw\src\Debug\glfw3.lib
