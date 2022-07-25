@@ -1,0 +1,10 @@
+^C:\USERS\ELISEY\SOURCE\REPOS\OPENGL_GAME-MASTER\OPENGL_GAME-MASTER\OPENGL_GAME\OPENGLGAMECORE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game -BC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build --check-stamp-file C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1FC63A48-12EA-3534-B28A-F08CFBCBBF1B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>OpenGLgameCore</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OpenGLgameCore.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OpenGLgameCore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OpenGLgameCore.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OpenGLgameCore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OpenGLgameCore.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OpenGLgameCore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OpenGLgameCore.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OpenGLgameCore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SPDLOG_COMPILED_LIB;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glfw\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\spdlog\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glad\include;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\external\glm;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external;C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\..\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game -BC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build --check-stamp-file C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game -BC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build --check-stamp-file C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game -BC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build --check-stamp-file C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game -BC:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build --check-stamp-file C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/build/OpenGLgameCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Application.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Event.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Log.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\includes\OpenGLgameCore\Camera.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Window.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.hpp" />
+    <ClInclude Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.hpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Application.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Window.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Camera.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\ShaderProgram.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\ZERO_CHECK.vcxproj">
+      <Project>{FC869904-4362-3567-83ED-6ACE883ED7C8}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\ImGui.vcxproj">
+      <Project>{3D9A946C-CACC-3A1F-9AA0-EE84E3F6B4A1}</Project>
+      <Name>ImGui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\glad\glad.vcxproj">
+      <Project>{19689BE3-DA79-37F0-B2DE-3873A6A048D0}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\glfw\src\glfw.vcxproj">
+      <Project>{1F9EEC01-473D-3011-8746-47103D265CC7}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\spdlog\spdlog.vcxproj">
+      <Project>{6CC49ACD-E622-3273-8225-4470BD8542BD}</Project>
+      <Name>spdlog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -11,24 +11,36 @@ set(ENGINE_PUBLIC_INCLUDES
 
 set(ENGINE_PRIVATE_INCLUDES
 	src/OpenGLgameCore/Window.hpp
+<<<<<<< HEAD
 	src/OpenGLgameCore/Modules/UIModule.hpp
+=======
+>>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 	src/OpenGLgameCore/Rendering/OpenGL/ShaderProgram.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexBuffer.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexArray.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/IndexBuffer.hpp
+<<<<<<< HEAD
 	src/OpenGLgameCore/Rendering/OpenGL/Renderer_OpenGL.hpp
+=======
+>>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 )
 	
 set(ENGINE_PRIVATE_SOURCES
 	src/OpenGLgameCore/Application.cpp
 	src/OpenGLgameCore/Window.cpp
 	src/OpenGLgameCore/Camera.cpp
+<<<<<<< HEAD
 	src/OpenGLgameCore/Modules/UIModule.cpp
+=======
+>>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 	src/OpenGLgameCore/Rendering/OpenGL/ShaderProgram.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexBuffer.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexArray.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/IndexBuffer.cpp
+<<<<<<< HEAD
 	src/OpenGLgameCore/Rendering/OpenGL/Renderer_OpenGL.cpp
+=======
+>>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 )
 
 set(ENGINE_ALL_SOURCES

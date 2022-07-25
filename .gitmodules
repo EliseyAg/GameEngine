@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+[submodule "build/external/glfw"]
+	path = build/external/glfw
+	url = https://github.com/glfw/glfw.git
+>>>>>>> 1ed6159dea207cdcda968d6b2b3f61b5c1b28db1
 [submodule "external/glfw"]
 	path = external/glfw
 	url = https://github.com/glfw/glfw.git

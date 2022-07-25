@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/Elisey/source/repos/opengl_game-master/opengl_game-master/OpenGL_game/OpenGLgameCore/CMakeLists.txt
+  Application.cpp
+  Window.cpp
+  Camera.cpp
+  ShaderProgram.cpp
+  VertexBuffer.cpp
+  VertexArray.cpp
+  IndexBuffer.cpp
+  Создание кода...
+  OpenGLgameCore.vcxproj -> C:\Users\Elisey\source\repos\opengl_game-master\opengl_game-master\OpenGL_game\build\OpenGLgameCore\Debug\OpenGLgameCore.lib
