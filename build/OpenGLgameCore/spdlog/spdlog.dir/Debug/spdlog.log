@@ -1,5 +1,4 @@
-﻿  Building Custom Rule C:/Users/Elisey/Games on C++/GameEngine/external/spdlog/CMakeLists.txt
-  spdlog.cpp
+﻿  spdlog.cpp
   stdout_sinks.cpp
   color_sinks.cpp
   file_sinks.cpp

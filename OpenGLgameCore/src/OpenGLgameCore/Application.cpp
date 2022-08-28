@@ -23,10 +23,10 @@
 namespace Engine {
 
 	GLfloat positions_colors2[] = {
-	  -0.5f, -0.5f, 0.0f,   1.0f, 0.0f, 0.0f,
-	   0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,
-	  -0.5f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
-	   0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f
+	   0.0f, -0.5f, -0.5f,   1.0f, 0.0f, 0.0f,
+	   0.0f,  0.5f, -0.5f,   0.0f, 1.0f, 0.0f,
+	   0.0f, -0.5f,  0.5f,   0.0f, 0.0f, 1.0f,
+	   0.0f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f
 	};
 
 	GLuint indices[] = {
@@ -124,6 +124,24 @@ namespace Engine {
 			}
 		);
 
+		m_event_dispatcher.add_event_listener<EventMouseButtonPressed>(
+			[&](EventMouseButtonPressed& event)
+			{
+				LOG_INFO("[Mouse button pressed: {0}, at ({1}, {2})]", static_cast<int>(event.mouse_button), event.x_pos, event.y_pos);
+				Input::PressMouseButton(event.mouse_button);
+				on_mouse_button_event(event.mouse_button, event.x_pos, event.y_pos, true);
+			}
+		);
+
+		m_event_dispatcher.add_event_listener<EventMouseButtonReleased>(
+			[&](EventMouseButtonReleased& event)
+			{
+				LOG_INFO("[Mouse button released: {0}, at ({1}, {2})]", static_cast<int>(event.mouse_button), event.x_pos, event.y_pos);
+				Input::ReleaseMouseButton(event.mouse_button);
+				on_mouse_button_event(event.mouse_button, event.x_pos, event.y_pos, false);
+			}
+		);
+
 		m_pWindow->set_event_callback(
 			[&](BaseEvent& event)
 			{
@@ -182,8 +200,6 @@ namespace Engine {
 			glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
 			p_shader_program->setMatrix4("model_matrix", model_matrix);
 
-			camera.set_position_rotation(glm::vec3(camera_position[0], camera_position[1], camera_position[2]),
-				glm::vec3(camera_rotation[0], camera_rotation[1], camera_rotation[2]));
 			camera.set_projection_mode(perspective_camera ? Camera::ProjectionMode::Perspective : Camera::ProjectionMode::Orthograthic);
 
 			p_shader_program->setMatrix4("view_projection_matrix", camera.get_projection_matrix() * camera.get_view_matrix());
@@ -212,6 +228,10 @@ namespace Engine {
 			on_update();
 		}
 		return m_pWindow->resultCode;
-
     }
+
+	glm::vec2 Application::get_current_cursor_position() const
+	{
+		return m_pWindow->get_current_cursor_position();
+	}
 }

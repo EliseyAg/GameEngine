@@ -23,12 +23,19 @@ namespace Engine {
 
 		virtual void on_ui_draw() {};
 
+		virtual void on_mouse_button_event(const MouseButton button_code, 
+										   const double x_pos, 
+										   const double y_pos, 
+										   const bool pressed) {};
+
+		glm::vec2 get_current_cursor_position() const;
+
 		float m_background_color[4] = { 0.33f, 0.33f, 0.33f, 0.f };
 
-		float camera_position[3] = { 0.f, 0.f, 1.f };
-		float camera_rotation[3] = { 0.f, 0.f, 0.f };
+		float camera_position[3] = { -5.f,  0.f,  0.f };
+		float camera_rotation[3] = {  0.f,  0.f,  0.f };
 		bool perspective_camera = true;
-		Camera camera;
+		Camera camera {glm::vec3(-5, 0, 0)};
 
 	private:
 		std::unique_ptr<class Window> m_pWindow;
