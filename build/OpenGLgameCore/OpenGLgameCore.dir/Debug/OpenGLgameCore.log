@@ -1,17 +1,2 @@
-﻿  Application.cpp
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(77,73): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(77,60): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(77,46): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(80,73): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(80,60): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(80,46): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(81,74): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(81,60): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(81,46): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(84,74): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(84,61): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(84,46): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(85,74): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(85,61): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
-C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp(85,46): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+﻿  Camera.cpp
   OpenGLgameCore.vcxproj -> C:\Users\Elisey\Games on C++\GameEngine\build\OpenGLgameCore\Debug\OpenGLgameCore.lib

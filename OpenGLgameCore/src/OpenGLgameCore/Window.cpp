@@ -160,6 +160,16 @@ namespace Engine {
         double x_pos;
         double y_pos;
         glfwGetCursorPos(m_pWindow, &x_pos, &y_pos);
+
+        if      (x_pos >= m_data.width - 1)
+            glfwSetCursorPos(m_pWindow, 2,                y_pos);
+        else if (x_pos <= 1)
+            glfwSetCursorPos(m_pWindow, m_data.width - 2, y_pos);
+        else if (y_pos >= m_data.height - 1)
+            glfwSetCursorPos(m_pWindow, x_pos, 2);
+        else if (y_pos <= 1)
+            glfwSetCursorPos(m_pWindow, x_pos, m_data.height - 2);
+
         return { x_pos, y_pos };
     }
 }

@@ -24,10 +24,10 @@
 namespace Engine {
 
 	GLfloat positions_colors_coords[] = {
-		0.0f, -0.5f, -0.5f,   1.0f, 1.0f, 0.0f,   10.f, 0.f,
-		0.0f,  0.5f, -0.5f,   0.0f, 1.0f, 1.0f,  0.f, 0.f,
-		0.0f, -0.5f,  0.5f,   1.0f, 0.0f, 1.0f,   10.f,  10.f,
-		0.0f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f,  0.f,  10.f
+		0.0f, -0.5f, -0.5f,   1.0f, 0.0f, 0.0f,  10.f,  0.f,
+		0.0f,  0.5f, -0.5f,   0.0f, 1.0f, 0.0f,  0.f,   0.f,
+		0.0f, -0.5f,  0.5f,   0.0f, 0.0f, 1.0f,  10.f,  10.f,
+		0.0f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f,  0.f,   10.f
 	};
 
 	GLuint indices[] = {
@@ -146,8 +146,8 @@ namespace Engine {
 				out vec4 frag_color;
 
 				void main() {
-				    //frag_color = vec4(color, 1.0);
-					frag_color = texture(InTexture_Smile, tex_coord_smile) * texture(InTexture_Quads, tex_coord_quads);
+				    frag_color = vec4(color, 1.0);
+					frag_color += texture(InTexture_Smile, tex_coord_smile) * texture(InTexture_Quads, tex_coord_quads) / 2;
 				}
 			)";
 
@@ -313,7 +313,7 @@ namespace Engine {
 
 			glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
 			p_shader_program->setMatrix4("model_matrix", model_matrix);
-			//p_shader_program->setInt("current_frame", current_frame++);
+			p_shader_program->setInt("current_frame", current_frame++);
 
 			camera.set_projection_mode(perspective_camera ? Camera::ProjectionMode::Perspective : Camera::ProjectionMode::Orthograthic);
 

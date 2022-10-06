@@ -70,8 +70,8 @@ class EngineEditor : public Engine::Application {
 			glm::vec2 current_cursor_position = get_current_cursor_position();
 			if (Engine::Input::IsMouseButtonPressed(Engine::MouseButton::MOUSE_BUTTON_LEFT))
 			{
-				camera.move_right(static_cast<float>(current_cursor_position.x - m_initial_mouse_pos_x) / 100.f);
-				camera.move_up(static_cast<float>(m_initial_mouse_pos_y - current_cursor_position.y) / 100.f);
+				camera.move_right(-static_cast<float>(current_cursor_position.x - m_initial_mouse_pos_x) / 100.f);
+				camera.move_up(-static_cast<float>(m_initial_mouse_pos_y - current_cursor_position.y) / 100.f);
 			}
 			else
 			{
@@ -102,6 +102,7 @@ class EngineEditor : public Engine::Application {
 		camera_rotation[0] = camera.get_camera_rotation().x;
 		camera_rotation[1] = camera.get_camera_rotation().y;
 		camera_rotation[2] = camera.get_camera_rotation().z;
+
 		ImGui::Begin("Editor");
 		if (ImGui::SliderFloat3("camera position", camera_position, -10.f, 10.f))
 		{
@@ -111,6 +112,7 @@ class EngineEditor : public Engine::Application {
 		{
 			camera.set_rotation(glm::vec3(camera_rotation[0], camera_rotation[1], camera_rotation[2]));
 		}
+
 		ImGui::Checkbox("Perspective camera", &perspective_camera);
 		ImGui::End();
 	}

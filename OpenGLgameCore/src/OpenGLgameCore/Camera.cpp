@@ -119,6 +119,21 @@ namespace Engine {
 
     void Camera::add_movement_and_rotation(const glm::vec3& movement_delta, const glm::vec3& rotation_delta)
     {
+        if (m_rotation.x < 0)
+            m_rotation.x = 360;
+        if (m_rotation.x > 360)
+            m_rotation.x = 0;
+
+        if (m_rotation.y < 0)
+            m_rotation.y = 360;
+        if (m_rotation.y > 360)
+            m_rotation.y = 0;
+
+        if (m_rotation.z < 0)
+            m_rotation.z = 360;
+        if (m_rotation.z > 360)
+            m_rotation.z = 0;
+
         m_position += m_direction * movement_delta.x;
         m_position += m_right     * movement_delta.y;
         m_position += m_up        * movement_delta.z;
