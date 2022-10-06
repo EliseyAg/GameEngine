@@ -18,6 +18,7 @@ set(ENGINE_PRIVATE_INCLUDES
 	src/OpenGLgameCore/Rendering/OpenGL/VertexBuffer.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexArray.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/IndexBuffer.hpp
+	src/OpenGLgameCore/Rendering/OpenGL/Texture2D.hpp
 	src/OpenGLgameCore/Rendering/OpenGL/Renderer_OpenGL.hpp
 )
 	
@@ -31,6 +32,7 @@ set(ENGINE_PRIVATE_SOURCES
 	src/OpenGLgameCore/Rendering/OpenGL/VertexBuffer.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/VertexArray.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/IndexBuffer.cpp
+	src/OpenGLgameCore/Rendering/OpenGL/Texture2D.cpp
 	src/OpenGLgameCore/Rendering/OpenGL/Renderer_OpenGL.cpp
 )
 

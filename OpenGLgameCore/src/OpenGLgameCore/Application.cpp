@@ -8,9 +8,9 @@
 #include "Rendering/OpenGL/VertexBuffer.hpp"
 #include "Rendering/OpenGL/VertexArray.hpp"
 #include "Rendering/OpenGL/IndexBuffer.hpp"
+#include "Rendering/OpenGL/Texture2D.hpp"
 #include "Rendering/OpenGL/Renderer_OpenGL.hpp"
 
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 #include <imgui/imgui.h>
@@ -24,10 +24,10 @@
 namespace Engine {
 
 	GLfloat positions_colors_coords[] = {
-		0.0f, -0.5f, -0.5f,   1.0f, 1.0f, 0.0f,   2.f, -1.f,
-		0.0f,  0.5f, -0.5f,   0.0f, 1.0f, 1.0f,  -1.f, -1.f,
-		0.0f, -0.5f,  0.5f,   1.0f, 0.0f, 1.0f,   2.f,  2.f,
-		0.0f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f,  -1.f,  2.f
+		0.0f, -0.5f, -0.5f,   1.0f, 1.0f, 0.0f,   10.f, 0.f,
+		0.0f,  0.5f, -0.5f,   0.0f, 1.0f, 1.0f,  0.f, 0.f,
+		0.0f, -0.5f,  0.5f,   1.0f, 0.0f, 1.0f,   10.f,  10.f,
+		0.0f,  0.5f,  0.5f,   1.0f, 0.0f, 0.0f,  0.f,  10.f
 	};
 
 	GLuint indices[] = {
@@ -113,35 +113,41 @@ namespace Engine {
 		R"(
 				#version 460
 				layout(location = 0) in vec3 vertex_position;
-				layout(location = 1) in vec3 vertex_color;
-				layout(location = 2) in vec2 texture_coord;
+			    layout(location = 1) in vec3 vertex_color;
+			    layout(location = 2) in vec2 texture_coord;
 
-				uniform mat4 model_matrix;
-				uniform mat4 view_projection_matrix;
+			    uniform mat4 model_matrix;
+			    uniform mat4 view_projection_matrix;
+			    uniform int current_frame; 
 
-				out vec3 color;
-				out vec2 tex_coord;
+			    out vec3 color;
+			    out vec2 tex_coord_smile;
+			    out vec2 tex_coord_quads;
 
-				void main() {
-				   color = vertex_color;
-				   tex_coord = texture_coord;
-				   gl_Position = view_projection_matrix * model_matrix * vec4(vertex_position, 1.0);
-				}
+			    void main() {
+					color = vertex_color;
+					tex_coord_smile = texture_coord;
+					tex_coord_quads = texture_coord + vec2(current_frame / 1000.f, current_frame / 1000.f);
+					gl_Position = view_projection_matrix * model_matrix * vec4(vertex_position, 1.0);
+                }
 			)";
 
 	const char* fragment_shader =
 		R"(
 				#version 460
 				in vec3 color;
-				in vec2 tex_coord;
+				in vec2 tex_coord_smile;
+			    in vec2 tex_coord_quads;
 
-				layout (binding = 0) uniform sampler2D InTexture;
+			    layout (binding = 0) uniform sampler2D InTexture_Smile;
+			    layout (binding = 1) uniform sampler2D InTexture_Quads;
+
 
 				out vec4 frag_color;
 
 				void main() {
 				    //frag_color = vec4(color, 1.0);
-					frag_color = texture(InTexture, tex_coord);
+					frag_color = texture(InTexture_Smile, tex_coord_smile) * texture(InTexture_Quads, tex_coord_quads);
 				}
 			)";
 
@@ -149,6 +155,8 @@ namespace Engine {
 	std::unique_ptr<VertexBuffer> p_positions_colors_vbo;
 	std::unique_ptr<IndexBuffer> p_index_buffer;
 	std::unique_ptr<VertexArray> p_vao;
+	std::unique_ptr<Texture2D> p_texture_smile;
+	std::unique_ptr<Texture2D> p_texture_quads;
 	float scale[3] = { 1.f, 1.f, 1.f };
 	float rotate = 0.f;
 	float translate[3] = { 0.f, 0.f, 0.f };
@@ -242,16 +250,13 @@ namespace Engine {
 		const unsigned int channels = 3;
 		auto data = new unsigned char[width * height * channels];
 
-		GLuint textureHandle;
-		glCreateTextures(GL_TEXTURE_2D, 1, &textureHandle);
-		glTextureStorage2D(textureHandle, 1, GL_RGB8, width, height);
 		generate_smile_texture(data, width, height);
-		glTextureSubImage2D(textureHandle, 0, 0, 0, width, height, GL_RGB, GL_UNSIGNED_BYTE, data);
-		glTextureParameteri(textureHandle, GL_TEXTURE_WRAP_S, GL_REPEAT);
-		glTextureParameteri(textureHandle, GL_TEXTURE_WRAP_T, GL_REPEAT);
-		glTextureParameteri(textureHandle, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-		glTextureParameteri(textureHandle, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-		glBindTextureUnit(0, textureHandle);
+		p_texture_smile = std::make_unique<Texture2D>(data, width, height);
+		p_texture_smile->bind(0);
+
+		generate_quads_texture(data, width, height);
+		p_texture_quads = std::make_unique<Texture2D>(data, width, height);
+		p_texture_quads->bind(1);
 
 		delete[] data;
 
@@ -281,6 +286,8 @@ namespace Engine {
 		p_vao->add_vertex_buffer(*p_positions_colors_vbo);
 		p_vao->set_index_buffer(*p_index_buffer);
 
+		static int current_frame = 0;
+
 		while (!m_bCloseWindow)
 		{
 			Renderer_OpenGL::set_clear_color(m_background_color[0], m_background_color[1], m_background_color[2], m_background_color[3]);
@@ -306,6 +313,7 @@ namespace Engine {
 
 			glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
 			p_shader_program->setMatrix4("model_matrix", model_matrix);
+			//p_shader_program->setInt("current_frame", current_frame++);
 
 			camera.set_projection_mode(perspective_camera ? Camera::ProjectionMode::Perspective : Camera::ProjectionMode::Orthograthic);
 
@@ -334,8 +342,6 @@ namespace Engine {
 			m_pWindow->on_update();
 			on_update();
 		}
-
-		glDeleteTextures(1, &textureHandle);
 
 		return m_pWindow->resultCode;
     }

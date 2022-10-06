@@ -281,6 +281,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.hpp" />
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.hpp" />
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.hpp" />
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Texture2D.hpp" />
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.hpp" />
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Application.cpp" />
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Window.cpp" />
@@ -291,6 +292,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexBuffer.cpp" />
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\VertexArray.cpp" />
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.cpp" />
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Texture2D.cpp" />
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>

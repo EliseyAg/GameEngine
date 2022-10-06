@@ -28,6 +28,9 @@
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Texture2D.cpp">
+      <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.cpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClCompile>
@@ -67,6 +70,9 @@
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\IndexBuffer.hpp">
+      <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Texture2D.hpp">
       <Filter>src\OpenGLgameCore\Rendering\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Elisey\Games on C++\GameEngine\OpenGLgameCore\src\OpenGLgameCore\Rendering\OpenGL\Renderer_OpenGL.hpp">
