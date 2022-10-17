@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameCore/cmake_install.cmake")
-  include("C:/Users/Elisey/Games on C++/GameEngine/build/OpenGLgameEditor/cmake_install.cmake")
+  include("C:/Users/Elisey/Games on C++/GameEngine/build/GameEngineCore/cmake_install.cmake")
+  include("C:/Users/Elisey/Games on C++/GameEngine/build/GameEngineEditor/cmake_install.cmake")
 
 endif()
 

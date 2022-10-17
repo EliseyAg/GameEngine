@@ -1,8 +1,0 @@
-﻿  spdlog.cpp
-  stdout_sinks.cpp
-  color_sinks.cpp
-  file_sinks.cpp
-  async.cpp
-  cfg.cpp
-  fmt.cpp
-  spdlog.vcxproj -> C:\Users\Elisey\Games on C++\GameEngine\build\OpenGLgameCore\spdlog\Debug\spdlogd.lib
