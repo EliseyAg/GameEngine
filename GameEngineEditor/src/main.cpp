@@ -6,6 +6,7 @@
 
 #include <imgui/imgui.h>
 #include <imgui/backends/imgui_impl_opengl3.h>
+#include <imgui/imgui_internal.h>
 
 class EngineEditor : public EliseyAgGameEngine::Application {
 	double m_initial_mouse_pos_x = 0.0;
@@ -85,6 +86,56 @@ class EngineEditor : public EliseyAgGameEngine::Application {
 		camera.add_movement_and_rotation(movement_delta, rotation_delta);
 	}
 
+	void setup_dockspace_menu()
+	{
+		static ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_PassthruCentralNode | ImGuiDockNodeFlags_NoWindowMenuButton;
+		static ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;
+		window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
+		window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
+		window_flags |= ImGuiWindowFlags_NoBackground;
+
+		const ImGuiViewport* viewport = ImGui::GetMainViewport();
+		ImGui::SetNextWindowPos(viewport->WorkPos);
+		ImGui::SetNextWindowSize(viewport->WorkSize);
+		ImGui::SetNextWindowViewport(viewport->ID);
+		ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
+		ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
+		ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));
+		ImGui::Begin("DockSpace", nullptr, window_flags);
+		ImGui::PopStyleVar(3);
+
+		ImGuiIO& io = ImGui::GetIO();
+		ImGuiID dockspace_id = ImGui::GetID("MyDockSpace");
+		ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
+
+		if (ImGui::BeginMenuBar())
+		{
+			if (ImGui::BeginMenu("File"))
+			{
+				if (ImGui::MenuItem("New Scene...", NULL))
+				{
+
+				}
+				if (ImGui::MenuItem("Open Scene...", NULL))
+				{
+
+				}
+				if (ImGui::MenuItem("Save Scene...", NULL))
+				{
+
+				}
+				ImGui::Separator();
+				if (ImGui::MenuItem("Exit", NULL))
+				{
+					close();
+				}
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenuBar();
+		}
+		ImGui::End();
+	}
+
 	virtual void on_mouse_button_event(const EliseyAgGameEngine::MouseButton button_code,
 									   const double x_pos,
 									   const double y_pos,
@@ -96,12 +147,18 @@ class EngineEditor : public EliseyAgGameEngine::Application {
 
 	virtual void on_ui_draw() override
 	{
-		camera_position[0] = camera.get_camera_position().x;
-		camera_position[1] = camera.get_camera_position().y;
-		camera_position[2] = camera.get_camera_position().z;
-		camera_rotation[0] = camera.get_camera_rotation().x;
-		camera_rotation[1] = camera.get_camera_rotation().y;
-		camera_rotation[2] = camera.get_camera_rotation().z;
+		setup_dockspace_menu();
+
+		camera_position[0] = camera.get_position().x;
+		camera_position[1] = camera.get_position().y;
+		camera_position[2] = camera.get_position().z;
+		camera_rotation[0] = camera.get_rotation().x;
+		camera_rotation[1] = camera.get_rotation().y;
+		camera_rotation[2] = camera.get_rotation().z;
+
+		camera_fov = camera.get_field_of_view();
+		camera_near_plane = camera.get_near_clip_plane();
+		camera_far_plane = camera.get_far_clip_plane();
 
 		ImGui::Begin("Editor");
 		if (ImGui::SliderFloat3("camera position", camera_position, -10.f, 10.f))
@@ -112,8 +169,23 @@ class EngineEditor : public EliseyAgGameEngine::Application {
 		{
 			camera.set_rotation(glm::vec3(camera_rotation[0], camera_rotation[1], camera_rotation[2]));
 		}
+		if (ImGui::SliderFloat("camera FOV", &camera_fov, 1.f, 120.f))
+		{
+			camera.set_field_of_view(camera_fov);
+		}
+		if (ImGui::SliderFloat("camera near clip plane", &camera_near_plane, 0.1f, 10.f))
+		{
+			camera.set_near_clip_plane(camera_near_plane);
+		}
+		if (ImGui::SliderFloat("camera far clip plane", &camera_far_plane, 1.f, 100.f))
+		{
+			camera.set_far_clip_plane(camera_far_plane);
+		}
+		if (ImGui::Checkbox("Perspective camera", &perspective_camera))
+		{
+			camera.set_projection_mode(perspective_camera ? EliseyAgGameEngine::Camera::ProjectionMode::Perspective : EliseyAgGameEngine::Camera::ProjectionMode::Orthograthic);
+		}
 
-		ImGui::Checkbox("Perspective camera", &perspective_camera);
 		ImGui::End();
 	}
 };
@@ -127,7 +199,7 @@ int main() {
 		ShowWindow(hWnd, SW_HIDE);
 	#endif
 
-	int returnCode = pEngineEditor->start(1000, 1000, "Editor");
+	int returnCode = pEngineEditor->start(800, 800, "Editor");
 
 	return returnCode;
 }

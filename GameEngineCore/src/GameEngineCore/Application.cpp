@@ -176,6 +176,8 @@ namespace EliseyAgGameEngine {
 	float translate[3] = { 0.f, 0.f, 0.f };
 	float m_background_color[4] = { 0.33f, 0.33f, 0.33f, 0.f };
 
+	static int current_frame = 0;
+
 	std::array<glm::vec3, 9> positions = {
 			glm::vec3(-2.f, -2.f, -4.f),
 			glm::vec3(-5.f,  0.f,  3.f),
@@ -201,13 +203,75 @@ namespace EliseyAgGameEngine {
 
 	}
 
-    int Application::start(unsigned int window_width, unsigned int window_height, const char* title) {
+	void Application::draw()
+	{
+		Renderer_OpenGL::set_clear_color(m_background_color[0], m_background_color[1], m_background_color[2], m_background_color[3]);
+		Renderer_OpenGL::clear();
+
+		p_shader_program->bind();
+
+		glm::mat4 scale_matrix(scale[0], 0, 0, 0,
+			0, scale[1], 0, 0,
+			0, 0, scale[2], 0,
+			0, 0, 0, 1);
+
+		float rotate_in_radians = glm::radians(rotate);
+		glm::mat4 rotate_matrix(cos(rotate_in_radians), sin(rotate_in_radians), 0, 0,
+			-sin(rotate_in_radians), cos(rotate_in_radians), 0, 0,
+			0, 0, 1, 0,
+			0, 0, 0, 1);
+
+		glm::mat4 translate_matrix(1, 0, 0, 0,
+			0, 1, 0, 0,
+			0, 0, 1, 0,
+			translate[0], translate[1], translate[2], 1);
+
+		glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
+		p_shader_program->setMatrix4("model_matrix", model_matrix);
+		p_shader_program->setInt("current_frame", current_frame++);
+
+		p_shader_program->setMatrix4("view_projection_matrix", camera.get_projection_matrix() * camera.get_view_matrix());
+
+		Renderer_OpenGL::draw(*p_vao);
+
+		for (const glm::vec3& current_position : positions)
+		{
+			glm::mat4 translate_matrix(1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				current_position[0], current_position[1], current_position[2], 1);
+
+			p_shader_program->setMatrix4("model_matrix", translate_matrix);
+
+			Renderer_OpenGL::draw(*p_vao);
+		}
+
+		UIModule::on_ui_draw_begin();
+		//ImGui::Begin("Background Color Window");
+		//ImGui::ColorEdit4("Background Color", m_background_color);
+		//ImGui::SliderFloat3("scale", scale, 0.f, 2.f);
+		//ImGui::SliderFloat("rotate", &rotate, 0.f, 360.f);
+		//ImGui::SliderFloat3("translate", translate, -1.f, 1.f);
+		//ImGui::End();
+
+		on_ui_draw();
+
+		UIModule::on_ui_draw_end();
+
+		m_pWindow->on_update();
+	}
+
+    int Application::start(unsigned int window_width, unsigned int window_height, const char* title)
+	{
 		m_pWindow = std::make_unique<Window>(title, window_width, window_height);
+		camera.set_viewport_size(static_cast<float>(window_width), static_cast<float>(window_height));
 
 		m_event_dispatcher.add_event_listener<EventWindowResize>(
-			[](EventWindowResize& event)
+			[&](EventWindowResize& event)
 			{
-				LOG_INFO("[Resized] Changed size to {0}x{1}", event.height, event.height);
+				LOG_INFO("[Resized] Changed size to {0}x{1}", event.width, event.height);
+				camera.set_viewport_size(event.width, event.height);
+				draw();
 			}
 		);
 
@@ -215,7 +279,7 @@ namespace EliseyAgGameEngine {
 			[&](EventWindowClose& event)
 			{
 				LOG_INFO("[WindowClose]");
-				m_bCloseWindow = true;
+				close();
 			}
 		);
 
@@ -314,78 +378,21 @@ namespace EliseyAgGameEngine {
 		p_vao->add_vertex_buffer(*p_cube_positions_colors_vbo);
 		p_vao->set_index_buffer(*p_cube_index_buffer);
 
-		static int current_frame = 0;
-
 		Renderer_OpenGL::enable_depth_testing();
 
 		while (!m_bCloseWindow)
 		{
-			Renderer_OpenGL::set_clear_color(m_background_color[0], m_background_color[1], m_background_color[2], m_background_color[3]);
-			Renderer_OpenGL::clear();
-
-			p_shader_program->bind();
-
-			glm::mat4 scale_matrix(scale[0], 0, 0, 0,
-				0, scale[1], 0, 0,
-				0, 0, scale[2], 0,
-				0, 0, 0, 1);
-
-			float rotate_in_radians = glm::radians(rotate);
-			glm::mat4 rotate_matrix(cos(rotate_in_radians), sin(rotate_in_radians), 0, 0,
-				-sin(rotate_in_radians), cos(rotate_in_radians), 0, 0,
-				0, 0, 1, 0,
-				0, 0, 0, 1);
-
-			glm::mat4 translate_matrix(1, 0, 0, 0,
-				0, 1, 0, 0,
-				0, 0, 1, 0,
-				translate[0], translate[1], translate[2], 1);
-
-			glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
-			p_shader_program->setMatrix4("model_matrix", model_matrix);
-			p_shader_program->setInt("current_frame", current_frame++);
-
-			camera.set_projection_mode(perspective_camera ? Camera::ProjectionMode::Perspective : Camera::ProjectionMode::Orthograthic);
-			p_shader_program->setMatrix4("view_projection_matrix", camera.get_projection_matrix() * camera.get_view_matrix());
-
-			Renderer_OpenGL::draw(*p_vao);
-
-			for (const glm::vec3& current_position : positions)
-			{
-				glm::mat4 translate_matrix(1, 0, 0, 0,
-					0, 1, 0, 0,
-					0, 0, 1, 0,
-					current_position[0], current_position[1], current_position[2], 1);
-
-				p_shader_program->setMatrix4("model_matrix", translate_matrix);
-
-				Renderer_OpenGL::draw(*p_vao);
-			}
-
-			UIModule::on_ui_draw_begin();
-			bool show = true;
-			UIModule::ShowExampleAppDockSpace(&show);
-			ImGui::ShowDemoWindow();
-			ImGui::Begin("Background Color Window");
-			ImGui::ColorEdit4("Background Color", m_background_color);
-			ImGui::SliderFloat3("scale", scale, 0.f, 2.f);
-			ImGui::SliderFloat("rotate", &rotate, 0.f, 360.f);
-			ImGui::SliderFloat3("translate", translate, -1.f, 1.f);
-			ImGui::SliderFloat3("camera position", camera_position, -10.f, 10.f);
-			ImGui::SliderFloat3("camera rotation", camera_rotation, 0, 360.f);
-			ImGui::Checkbox("Perspective camera", &perspective_camera);
-			ImGui::End();
-
-			on_ui_draw();
-
-			UIModule::on_ui_draw_end();
-
-			m_pWindow->on_update();
+			draw();
 			on_update();
 		}
 
 		return m_pWindow->resultCode;
     }
+
+	void Application::close()
+	{
+		m_bCloseWindow = true;
+	}
 
 	glm::vec2 Application::get_current_cursor_position() const
 	{
