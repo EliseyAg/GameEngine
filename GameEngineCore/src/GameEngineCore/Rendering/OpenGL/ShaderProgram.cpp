@@ -110,12 +110,22 @@ namespace EliseyAgGameEngine
         shaderProgram.m_isCompiled = false;
     }
 
-    void ShaderProgram::setMatrix4(const char* name, const glm::mat4& matrix) const
+    void ShaderProgram::set_matrix4(const char* name, const glm::mat4& matrix) const
     {
         glUniformMatrix4fv(glGetUniformLocation(m_id, name), 1, GL_FALSE, glm::value_ptr(matrix));
     }
 
-    void ShaderProgram::setInt(const char* name, const int integ) const
+    void ShaderProgram::set_vec3(const char* name, const glm::vec3& value) const
+    {
+        glUniform3f(glGetUniformLocation(m_id, name), value.x, value.y, value.z);
+    }
+
+    void ShaderProgram::set_float(const char* name, const float value) const
+    {
+        glUniform1f(glGetUniformLocation(m_id, name), value);
+    }
+
+    void ShaderProgram::set_int(const char* name, const int integ) const
     {
         glUniform1i(glGetUniformLocation(m_id, name), integ);
     }

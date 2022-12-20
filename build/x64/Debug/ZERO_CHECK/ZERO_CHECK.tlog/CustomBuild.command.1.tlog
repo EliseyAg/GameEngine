@@ -1,6 +1,6 @@
-^C:\USERS\ELISEY\GAMES ON C++\GAMEENGINE\BUILD\CMAKEFILES\7DB9B7C2D8232FDCC04B14B9C1BEDD0E\GENERATE.STAMP.RULE
+^C:\USERS\ELISEY\DESKTOP\PROJECTS\C++\GAMEENGINE\BUILD\CMAKEFILES\ADEBD04A79963E1C6FFC05B4315C4005\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Elisey/Games on C++/GameEngine" "-BC:/Users/Elisey/Games on C++/GameEngine/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Elisey/Games on C++/GameEngine/build/Project.sln"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Elisey/Desktop/Projects/C++/GameEngine -BC:/Users/Elisey/Desktop/Projects/C++/GameEngine/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/Project.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

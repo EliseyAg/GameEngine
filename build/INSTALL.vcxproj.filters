@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Elisey\Games on C++\GameEngine\build\CMakeFiles\7db9b7c2d8232fdcc04b14b9c1bedd0e\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\adebd04a79963e1c6ffc05b4315c4005\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{82AF9E19-3176-3895-A53A-3050F2BDF13B}</UniqueIdentifier>
+      <UniqueIdentifier>{5874E8C7-7806-3A7F-985E-8F081B8C8006}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
