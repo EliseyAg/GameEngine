@@ -155,22 +155,22 @@ namespace EliseyAgGameEngine {
 			    layout(location = 1) in vec3 vertex_normal;
 			    layout(location = 2) in vec2 texture_coord;
 
-			    uniform mat4 model_matrix;
-			    uniform mat4 view_projection_matrix;
+			    uniform mat4 model_view_matrix;
+			    uniform mat4 mvp_matrix;
+			    uniform mat3 normal_matrix;
 			    uniform int current_frame;
 
 			    out vec2 tex_coord_smile;
 			    out vec2 tex_coord_quads;
-			    out vec3 frag_normal;
-			    out vec3 frag_position;
+			    out vec3 frag_normal_eye;
+			    out vec3 frag_position_eye;
 
 			    void main() {
 					tex_coord_smile = texture_coord;
-					tex_coord_quads = texture_coord + vec2(current_frame / 1000.f, current_frame / 1000.f);
-					frag_normal = mat3(transpose(inverse(model_matrix))) * vertex_normal;
-					vec4 vertex_position_world = model_matrix * vec4(vertex_position, 1.f);
-					frag_position = vertex_position_world.xyz;
-					gl_Position = view_projection_matrix * vertex_position_world;
+					tex_coord_quads = texture_coord + vec2(current_frame / 10000.f, current_frame / 10000.f);
+					frag_normal_eye = normal_matrix * vertex_normal;
+					frag_position_eye = vec3(model_view_matrix * vec4(vertex_position, 1.f));
+					gl_Position = mvp_matrix * vec4(vertex_position, 1.f);
                 }
 			)";
 
@@ -179,41 +179,40 @@ namespace EliseyAgGameEngine {
 				#version 460
 				in vec2 tex_coord_smile;
 			    in vec2 tex_coord_quads;
-			    in vec3 frag_normal;
-			    in vec3 frag_position;
+			    in vec3 frag_position_eye;
+			    in vec3 frag_normal_eye;
 
 			    layout (binding = 0) uniform sampler2D InTexture_Smile;
 			    layout (binding = 1) uniform sampler2D InTexture_Quads;
-				
-				uniform vec3 light_color;
-				uniform float ambient_factor;
-				uniform float diffuse_factor;
-				uniform float specular_factor;
-				uniform float shininess;
-				uniform vec3 light_position;
-				uniform vec3 camera_position;
 
-				out vec4 frag_color;
+			    uniform vec3 light_position_eye;
+			    uniform vec3 light_color;
+			    uniform float ambient_factor;
+			    uniform float diffuse_factor;
+			    uniform float specular_factor;
+			    uniform float shininess;
 
-				void main() {
+			    out vec4 frag_color;
 
-					vec3 normal = normalize(frag_normal);
-					vec3 light_dir = normalize(light_position - frag_position);
-					vec3 view_dir = normalize(camera_position - frag_position);
-					vec3 reflect_dir = reflect(-light_dir, normal);
+			    void main() {
 
-					//ambient
+					// ambient
 					vec3 ambient = ambient_factor * light_color;
 
-					//diffuse
-					vec3 diffuse = diffuse_factor * light_color * dot(normal, light_dir);
+					// diffuse
+					vec3 normal = normalize(frag_normal_eye);
+					vec3 light_dir = normalize(light_position_eye - frag_position_eye);
+					vec3 diffuse = diffuse_factor * light_color * max(dot(normal, light_dir), 0.0);
 
-					//specular
-					float specular_value = pow(max(dot(view_dir, reflect_dir), 0.f), shininess);
-					vec3 specular = specular_value * specular_factor * light_color;
+					// specular
+					vec3 view_dir = normalize(-frag_position_eye);
+					vec3 reflect_dir = reflect(-light_dir, normal);
+					float specular_value = pow(max(dot(view_dir, reflect_dir), 0.0), shininess);
+					vec3 specular = specular_factor * specular_value * light_color;
 
-					//frag_color = texture(InTexture_Smile, tex_coord_smile) * texture(InTexture_Quads, tex_coord_quads);
+					//frag_color = texture(InTexture_Smile, tex_coord_smile) * texture(InTexture_Quads, tex_coord_quads) * vec4(ambient + diffuse + specular, 1.f);
 					frag_color = texture(InTexture_Smile, tex_coord_smile) * vec4(ambient + diffuse + specular, 1.f);
+
 				}
 			)";
 
@@ -222,11 +221,10 @@ namespace EliseyAgGameEngine {
 				#version 460
 				layout(location = 0) in vec3 vertex_position;
 
-			    uniform mat4 model_matrix;
-			    uniform mat4 view_projection_matrix;
+			    uniform mat4 mvp_matrix;
 
 			    void main() {
-					gl_Position = view_projection_matrix * model_matrix * vec4(vertex_position * 0.1f, 1.f);
+					gl_Position = mvp_matrix * vec4(vertex_position * 0.1f, 1.f);
                 }
 			)";
 
@@ -286,35 +284,13 @@ namespace EliseyAgGameEngine {
 		Renderer_OpenGL::clear();
 
 		p_shader_program->bind();
-
-		//glm::mat4 scale_matrix(scale[0], 0, 0, 0,
-		//	0, scale[1], 0, 0,
-		//	0, 0, scale[2], 0,
-		//	0, 0, 0, 1);
-
-		//float rotate_in_radians = glm::radians(rotate);
-		//glm::mat4 rotate_matrix(cos(rotate_in_radians), sin(rotate_in_radians), 0, 0,
-		//	-sin(rotate_in_radians), cos(rotate_in_radians), 0, 0,
-		//	0, 0, 1, 0,
-		//	0, 0, 0, 1);
-
-		//glm::mat4 translate_matrix(1, 0, 0, 0,
-		//	0, 1, 0, 0,
-		//	0, 0, 1, 0,
-		//	translate[0], translate[1], translate[2], 1);
-
-		//glm::mat4 model_matrix = translate_matrix * rotate_matrix * scale_matrix;
-		//p_shader_program->setMatrix4("model_matrix", model_matrix);
-
 		p_shader_program->set_int("current_frame", current_frame++);
-		p_shader_program->set_matrix4("view_projection_matrix", camera.get_projection_matrix() * camera.get_view_matrix());
-		p_shader_program->set_vec3("light_position", glm::vec3(light_source_position[0], light_source_position[1], light_source_position[2]));
+		p_shader_program->set_vec3("light_position_eye", glm::vec3(camera.get_view_matrix() * glm::vec4(light_source_position[0], light_source_position[1], light_source_position[2], 1.f)));
 		p_shader_program->set_vec3("light_color", glm::vec3(light_source_color[0], light_source_color[1], light_source_color[2]));
 		p_shader_program->set_float("ambient_factor", ambient_factor);
 		p_shader_program->set_float("diffuse_factor", diffuse_factor);
 		p_shader_program->set_float("specular_factor", specular_factor);
 		p_shader_program->set_float("shininess", shininess);
-		p_shader_program->set_vec3("camera_position", camera.get_position());
 
 		for (const glm::vec3& current_position : positions)
 		{
@@ -323,21 +299,23 @@ namespace EliseyAgGameEngine {
 				0, 0, 1, 0,
 				current_position[0], current_position[1], current_position[2], 1);
 
-			p_shader_program->set_matrix4("model_matrix", translate_matrix);
+			const glm::mat4 model_view_matrix = camera.get_view_matrix() * translate_matrix;
+			p_shader_program->set_matrix4("model_view_matrix", model_view_matrix);
+			p_shader_program->set_matrix4("mvp_matrix", camera.get_projection_matrix() * model_view_matrix);
+			p_shader_program->set_matrix3("normal_matrix", glm::transpose(glm::inverse(glm::mat3(model_view_matrix))));
 
 			Renderer_OpenGL::draw(*p_cube_vao);
 		}
 
 		{
 			p_light_source_shader_program->bind();
-			p_light_source_shader_program->set_matrix4("view_projection_matrix", camera.get_projection_matrix() * camera.get_view_matrix());
 
 			glm::mat4 translate_matrix(1, 0, 0, 0,
 				0, 1, 0, 0,
 				0, 0, 1, 0,
 				light_source_position[0], light_source_position[1], light_source_position[2], 1);
 
-			p_light_source_shader_program->set_matrix4("model_matrix", translate_matrix);
+			p_light_source_shader_program->set_matrix4("mvp_matrix", camera.get_projection_matrix() * camera.get_view_matrix() * translate_matrix);
 			p_light_source_shader_program->set_vec3("light_color", glm::vec3(light_source_color[0], light_source_color[1], light_source_color[2]));
 
 			Renderer_OpenGL::draw(*p_cube_vao);

@@ -23,7 +23,9 @@ class EngineEditor : public EliseyAgGameEngine::Application {
 	{
 		glm::vec3 movement_delta{0, 0, 0};
 		glm::vec3 rotation_delta{0, 0, 0};
+		float editor_camera_speed = 0.5f;
 		bool move_camera = false;
+
 		if (EliseyAgGameEngine::Input::IsKeyPressed(EliseyAgGameEngine::KeyCode::KEY_W))
 		{
 			movement_delta.x +=  0.01f;
@@ -90,7 +92,7 @@ class EngineEditor : public EliseyAgGameEngine::Application {
 			m_initial_mouse_pos_y = current_cursor_position.y;
 		}
 
-		camera.add_movement_and_rotation(movement_delta, rotation_delta);
+		camera.add_movement_and_rotation(movement_delta * editor_camera_speed, rotation_delta * editor_camera_speed);
 	}
 
 	void setup_dockspace_menu()
