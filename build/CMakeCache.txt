@@ -258,7 +258,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Value Computed by CMake
-GLFW_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineCore/glfw
+GLFW_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineLibrary/glfw
 
 //Build the GLFW documentation
 GLFW_BUILD_DOCS:BOOL=ON
@@ -384,7 +384,7 @@ SPDLOG_WCHAR_SUPPORT:BOOL=OFF
 USE_MSVC_RUNTIME_LIBRARY_DLL:BOOL=ON
 
 //Value Computed by CMake
-glad_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineCore/glad
+glad_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineLibrary/glad
 
 //Value Computed by CMake
 glad_IS_TOP_LEVEL:STATIC=OFF
@@ -393,7 +393,7 @@ glad_IS_TOP_LEVEL:STATIC=OFF
 glad_SOURCE_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/external/glad
 
 //Value Computed by CMake
-glm_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineCore/glm
+glm_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineLibrary/glm
 
 //Value Computed by CMake
 glm_IS_TOP_LEVEL:STATIC=OFF
@@ -402,7 +402,7 @@ glm_IS_TOP_LEVEL:STATIC=OFF
 glm_SOURCE_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/external/glm
 
 //Value Computed by CMake
-spdlog_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineCore/spdlog
+spdlog_BINARY_DIR:STATIC=C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/GameEngineLibrary/spdlog
 
 //Value Computed by CMake
 spdlog_IS_TOP_LEVEL:STATIC=OFF

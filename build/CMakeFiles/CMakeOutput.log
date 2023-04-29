@@ -6,8 +6,8 @@ Id flags:
 
 The output was:
 0
-MSBuild version 17.4.0+18d5aef85 for .NET Framework
-Сборка начата 06.12.2022 20:18:49.
+MSBuild version 17.4.1+9a89d02ff for .NET Framework
+Сборка начата 29.04.2023 18:53:29.
 Проект "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\3.25.1\CompilerIdC\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
 PrepareForBuild:
   Создание каталога "Debug\".
@@ -33,7 +33,7 @@ FinalizeBuildStatus:
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.34
+Прошло времени 00:00:00.62
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -49,8 +49,8 @@ Id flags:
 
 The output was:
 0
-MSBuild version 17.4.0+18d5aef85 for .NET Framework
-Сборка начата 06.12.2022 20:18:51.
+MSBuild version 17.4.1+9a89d02ff for .NET Framework
+Сборка начата 29.04.2023 18:53:30.
 Проект "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\3.25.1\CompilerIdCXX\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
 PrepareForBuild:
   Создание каталога "Debug\".
@@ -76,7 +76,7 @@ FinalizeBuildStatus:
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.08
+Прошло времени 00:00:00.41
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -86,26 +86,26 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is MSVC, found in "C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/3.25.1/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-dgz5od
+Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-0lkrw9
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_35626.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
-  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31935 для x64
-  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_3461d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31937 для x64
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_35626.dir\Debug\\" /Fd"cmTC_35626.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c"
-  cmTC_35626.vcxproj -> C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-dgz5od\Debug\cmTC_35626.exe
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3461d.dir\Debug\\" /Fd"cmTC_3461d.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c"
+  cmTC_3461d.vcxproj -> C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-0lkrw9\Debug\cmTC_3461d.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-70t727
+Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-gxln89
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_87110.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
-  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31935 для x64
-  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_7904e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31937 для x64
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_87110.dir\Debug\\" /Fd"cmTC_87110.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_87110.vcxproj -> C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-70t727\Debug\cmTC_87110.exe
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7904e.dir\Debug\\" /Fd"cmTC_7904e.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_7904e.vcxproj -> C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-gxln89\Debug\cmTC_7904e.exe
 
 
 

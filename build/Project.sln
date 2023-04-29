@@ -26,7 +26,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxp
 		{D2F78DF7-24DC-34E7-A308-B4B0D6FE98CE} = {D2F78DF7-24DC-34E7-A308-B4B0D6FE98CE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngineCore", "GameEngineCore\GameEngineCore.vcxproj", "{D92850FE-4998-3D02-9222-47687114B7C9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngineCore", "GameEngineLibrary\GameEngineCore.vcxproj", "{D92850FE-4998-3D02-9222-47687114B7C9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B9E4CFEB-11BC-32A1-BE54-9EAA4F50C5F8} = {B9E4CFEB-11BC-32A1-BE54-9EAA4F50C5F8}
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
@@ -41,7 +41,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj"
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "GameEngineCore\ImGui.vcxproj", "{B9E4CFEB-11BC-32A1-BE54-9EAA4F50C5F8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImGui", "GameEngineLibrary\ImGui.vcxproj", "{B9E4CFEB-11BC-32A1-BE54-9EAA4F50C5F8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 		{169A9A4A-1C31-383E-9882-906B0331907F} = {169A9A4A-1C31-383E-9882-906B0331907F}
@@ -52,27 +52,27 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vc
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "GameEngineCore\glad\glad.vcxproj", "{169A9A4A-1C31-383E-9882-906B0331907F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "GameEngineLibrary\glad\glad.vcxproj", "{169A9A4A-1C31-383E-9882-906B0331907F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "GameEngineCore\glfw\src\glfw.vcxproj", "{2B09273A-EADD-3E62-AF1A-3798D0DA41E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "GameEngineLibrary\glfw\src\glfw.vcxproj", "{2B09273A-EADD-3E62-AF1A-3798D0DA41E3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spdlog", "GameEngineCore\spdlog\spdlog.vcxproj", "{D2F78DF7-24DC-34E7-A308-B4B0D6FE98CE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spdlog", "GameEngineLibrary\spdlog\spdlog.vcxproj", "{D2F78DF7-24DC-34E7-A308-B4B0D6FE98CE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "GameEngineCore\glfw\uninstall.vcxproj", "{AC4045D8-BA97-3A68-8E80-C6D7F636C5CD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "GameEngineLibrary\glfw\uninstall.vcxproj", "{AC4045D8-BA97-3A68-8E80-C6D7F636C5CD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "update_mappings", "GameEngineCore\glfw\src\update_mappings.vcxproj", "{5912AF16-6796-3946-80ED-53D31B6E6814}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "update_mappings", "GameEngineLibrary\glfw\src\update_mappings.vcxproj", "{5912AF16-6796-3946-80ED-53D31B6E6814}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47E88151-E558-308B-A085-9B3CAD5E9392} = {47E88151-E558-308B-A085-9B3CAD5E9392}
 	EndProjectSection

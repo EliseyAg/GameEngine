@@ -1,12 +1,12 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-mqcdsz
+Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-xbrqbp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_86e17.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
-  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31935 для x64
-  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_32392.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31937 для x64
   src.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_86e17.dir\Debug\\" /Fd"cmTC_86e17.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-mqcdsz\src.c"
-C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-mqcdsz\src.c(1,10): fatal  error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-mqcdsz\cmTC_86e17.vcxproj]
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_32392.dir\Debug\\" /Fd"cmTC_32392.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-xbrqbp\src.c"
+C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-xbrqbp\src.c(1,10): fatal  error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-xbrqbp\cmTC_32392.vcxproj]
 
 
 Source file was:
@@ -32,26 +32,26 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-46gskl
+Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-bb2eav
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8ab67.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
-  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31935 для x64
-  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c0b57.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31937 для x64
   CheckFunctionExists.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ab67.dir\Debug\\" /Fd"cmTC_8ab67.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-46gskl\CheckFunctionExists.c"
-LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-46gskl\cmTC_8ab67.vcxproj]
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c0b57.dir\Debug\\" /Fd"cmTC_c0b57.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-bb2eav\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-bb2eav\cmTC_c0b57.vcxproj]
 
 
 
 Determining if the function pthread_create exists in the pthread failed with the following output:
-Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-knbx4b
+Change Dir: C:/Users/Elisey/Desktop/Projects/C++/GameEngine/build/CMakeFiles/CMakeScratch/TryCompile-3znrqx
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fda51.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.0+18d5aef85 for .NET Framework
-  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31935 для x64
-  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fe37a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.34.31937 для x64
   CheckFunctionExists.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fda51.dir\Debug\\" /Fd"cmTC_fda51.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-knbx4b\CheckFunctionExists.c"
-LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-knbx4b\cmTC_fda51.vcxproj]
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fe37a.dir\Debug\\" /Fd"cmTC_fe37a.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-3znrqx\CheckFunctionExists.c"
+LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [C:\Users\Elisey\Desktop\Projects\C++\GameEngine\build\CMakeFiles\CMakeScratch\TryCompile-3znrqx\cmTC_fe37a.vcxproj]
 
 
 
